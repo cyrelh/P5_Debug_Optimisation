@@ -248,7 +248,7 @@ form textarea {
 input[type="submit"] {
 	background-color: #5F5A25;
 	padding: .5em 1em;
-	border-color: #000;
+	border-color: #000; /*Contrast error résolu*/
 	color: #fff;
 }
 
