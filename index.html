@@ -21,6 +21,42 @@
 <!---Bootstrap-->
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	
+	
+<!--Ajout de Schema.org-->
+	<script defer type="application/ld+json">
+		{
+				"@context": "https://schema.org",
+				"@type": "LocalBusiness",
+				"name": "Nina Carducci Photographie",
+				"image": "https://github.com/cyrelh/P5_Debug_Optimisation/blob/main/assets/images/nina.webp",
+				"url":"https://github.com/cyrelh/P5_Debug_Optimisation.git",
+				"telephone":"05 56 67 78 89",
+				"priceRange":"50€ 400€",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "68 avenue Alsace-Lorraine",
+					"addressLocality": "Bordeaux",
+					"postalCode": "33200",
+					"addressCountry": "FR"
+				},
+				"openingHoursSpecification":{
+					"@type" : "OpeningHoursSpecification",
+					"dayOfWeek":[
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday"
+					],
+					"opens": "10AM"
+					"closes": "7PM"
+				}				
+				"currenciesAccepted": "EUR",
+				"paymentAccepted":"Cash, Credit Card",
+		}
+		</script>
+
 
 	<!-- CSS & JS -->
 	<!-- Ajout en différé pour le CSS -->
