@@ -112,7 +112,8 @@ body {
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	cursor: pointer; /*Création du pointeur pour le changement de filtre*/
 }
 .item-column {
 	position: relative;
