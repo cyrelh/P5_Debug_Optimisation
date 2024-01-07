@@ -74,8 +74,8 @@ body {
 }
 
 .picture img {
-	width: 100%;
-
+	width: 390px;
+	height: 390px;
 }
 #about-me {
 	flex: 2
@@ -90,15 +90,17 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 1rem; /*ajout du font size*/
+
 }
 #about-me p {
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+/*#gallery {
+		min-height: 100vh; 
+}*/
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -167,6 +169,11 @@ body {
 	background-color: #A8D5D8 ;
 	position: relative;
 }
+
+.price {
+	font-size: 25px;
+} 
+
 #services .container::before{
 	content: ' ';
 	background-color: #1C6474;
@@ -264,7 +271,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h2, #about-me p {
 		width: 100%;
 	}
 }
@@ -327,6 +334,24 @@ input[type="submit"] {
 		z-index: -1;
 	}
 }
+
+@media all and (min-width: 650px) and (max-width: 1000px) {
+	.image-container {
+		display: flex;
+		justify-content: center; /* Centre horizontalement */
+		align-items: center; /* Centre verticalement */
+		height: 100%; /* Rempli la hauteur du conteneur parent */
+	}
+	  
+	  .image-container img {
+		max-width: 100%; /* l'image ne dépasse pas la largeur de son conteneur */
+		max-height: 100%; /* l'image ne dépasse pas la hauteur de son conteneur */
+		object-fit: contain; /* le ratio hauteur/largeur conservé tout en ajustant l'image */
+		width: auto; /* Réinitialisez la largeur à "auto" pour permettre le centrage horizontal */
+		height: auto; /* Réinitialisez la hauteur à "auto" pour permettre le centrage vertical */
+	}
+}
+
 
 @media all and (max-width: 650px) {
 	.top-header {
