@@ -335,6 +335,13 @@ input[type="submit"] {
 	}
 }
 
+@media (max-width: 1000px){
+	#about {
+		flex-direction: column;
+	}
+}
+
+
 @media all and (min-width: 650px) and (max-width: 1000px) {
 	.image-container {
 		display: flex;

@@ -76,7 +76,7 @@
 	<!-- Ajout en différé pour le CSS -->
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="./assets/maugallery.min.js"></script>
-	<script defer src="./assets/scripts.js"></script>
+	<script defer src="./assets/scripts.min.js"></script>
 	<link rel="stylesheet" href="./assets/style.min.css">
 	
 </head>
@@ -89,7 +89,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="Icône du réseau social Instagram servant de lien vers la page Instagram de Nina Carducci."></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="Icône du réseau social Instagram qui est le lien vers la page Instagram de Nina Carducci."></a></li>
 		</ul>
 	</div>
 </header>
@@ -104,7 +104,7 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-
+<!-- On va rendre l'affichage de l'image responsive avec différentes tailles d'image en fonction de la largeur de l'écran => améliore les performances et l'expérience utilisateur -->
 				<img class="d-block w-100"
 				srcset=	"./assets/images/slider/ryoji/ryoji-iwata-wUZjnOv7t0g-unsplash-400w.webp 400w, 
 				./assets/images/slider/ryoji/ryoji-iwata-wUZjnOv7t0g-unsplash-600w.webp 600w, 
@@ -122,14 +122,12 @@
 				(max-width: 1600px) 1600px, 
 				(min-width: 1601px) 100vw"
 				src="./assets/images/slider//ryoji/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" 
-				loading="lazy" 
 				alt="Image d'un homme traversant un passage piéton."
 				width="1600"
-				height="auto">
+				height="888">
 
 			</div>
 
-<!-- COTINUER POUR LES DEUX AUTRES SLIDERS -->
 			<div class="carousel-item">
 				<img class="d-block w-100"
 				srcset="./assets/images/slider/nicholas/nicholas-green-nPz8akkUmDI-unsplash-400w.webp 400w,
@@ -148,10 +146,11 @@
 						(max-width: 1600px) 1600px, 
 						(min-width: 1601px) 100vw"
 				src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" 
-				loading="lazy" 
 				alt="Spectateurs en liesse levant les bras lors d'un concert."
 				width="1600"
-				height="auto">
+				height="888"
+				loading="lazy">
+				
 			</div>
 			<div class="carousel-item">
 				<img class="d-block w-100" 
@@ -171,10 +170,10 @@
 						(max-width: 1600px) 1600px, 
 						(min-width: 1601px) 100vw"
 				src="./assets/images/slider/edward-cisneros-3-h6-1npdgw-unsplash.webp" 
-				loading="lazy"
 				alt="Un homme marié embrasse sa nouvelle femme dans l'allée d'une église."
 				width="1600"
-				height="auto">
+				height="888"
+				loading="lazy">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -189,11 +188,13 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.webp" loading="lazy" alt="Image de Nina Carducci avec une forêt en arrière-plan.">
+		<div class="image-container">
+			<img src="./assets/images/nina.webp" alt="Image de Nina Carducci avec une forêt en arrière-plan." width="390px" height="390px">
+		</div>
 	</div>
 	<div id="about-me">
 		<h2 class="about-me__title">A propos de moi</h2>
-		<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
+		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
@@ -216,7 +217,7 @@
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<h3 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h3>
+				<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
@@ -231,7 +232,7 @@
 				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 			</div>
 			<div class="service__price">
-				<h4>350€/demi journée</h4>
+				<p>350€/demi journée</p>
 				<span>Matériel, déplacement inclus</span>
 			</div>
 
@@ -239,10 +240,10 @@
 		<div class="service">
 			<div class="service__description">
 				<h3>Retouches</h3>
-				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+				<p> Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
 			</div>
 			<div class="service__price">
-				<h4>50€/photo</h4>
+				<p>50€/photo</p>
 				<span>2 AR par photo</span>
 			</div>
 		</div>
@@ -252,7 +253,7 @@
 				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
 			</div>
 			<div class="service__price">
-				<h4>400€ album A4</h4>
+				<p>400€ album A4</p>
 				<span>30 pages recto/verso</span>
 			</div>
 		</div>
@@ -261,7 +262,7 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h3 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h3>
+			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
